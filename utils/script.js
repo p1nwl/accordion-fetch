@@ -1,6 +1,5 @@
-export function accordion() {
+export function accordion(url) {
     const accordionContainer = document.createElement('div');
-    
     
     const getData = (url) => 
         new Promise((resolve, reject) => 
@@ -10,7 +9,7 @@ export function accordion() {
             .catch(error => reject(error))
     )
     
-    getData('https://jsonplaceholder.typicode.com/posts/1/comments')
+    getData(url)
         .then(function (data) {   
             data.forEach(item => createAccordionItem(item));
             accordionContainer.className = 'accordion-container';
@@ -27,12 +26,18 @@ export function accordion() {
         const acHeader = document.createElement('h2');
         acHeader.className = 'ac-header';
         accordion.append(acHeader);
-        acHeader.append(item.name)
+        
     
         const acTrigger = document.createElement('button');
         acTrigger.className = 'ac-trigger';
         acTrigger.type = 'button';
         acHeader.append(acTrigger);
+        if (item.email) {
+            acTrigger.append(item.email)
+        }
+        if (item.title) {
+            acTrigger.append(item.title)
+        }
     
         const acPanel = document.createElement('div');
         acPanel.className = 'ac-panel';

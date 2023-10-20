@@ -1,3 +1,3 @@
-import { accordion } from '../../utils/script';
+import { accordion } from "../../utils/script.js";
 
-accordion();
+accordion('https://jsonplaceholder.typicode.com/posts/1/comments');
