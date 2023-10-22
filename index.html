@@ -9,19 +9,37 @@
     <title>Main page</title>
 </head>
 <body>
-    <div class="navbar-container">
-        <ul>
-            <li><a href="pages/Comments/comments.html">Comments</a></li>
-            <li><a href="pages/Photos/photos.html">Photos</a></li>
-            <li><a href="pages/Albums/albums.html">Albums</a></li>
-            <li><a href="pages/Todos/todos.html">To-do's</a></li>
-            <li><a href="pages/Posts/posts.html">Posts</a></li>
-        </ul>
+    <div class="navbar">
+        <div class="mobile-nav-toggle" aria-expanded="false">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </div>
+        <nav>
+            <ul class="nav-links">
+                <li>
+                    <a href="pages/Comments/comments.html">Comments</a>
+                </li>
+                <li>
+                    <a href="pages/Photos/photos.html">Photos</a>
+                </li>
+                <li>
+                    <a href="pages/Albums/albums.html">Albums</a>
+                </li>
+                <li>
+                    <a href="pages/Todos/todos.html">To-do's</a>
+                </li>
+                <li>
+                    <a href="pages/Posts/posts.html">Posts</a>
+                </li>
+            </ul>
+        </nav>
     </div>
 
     
     
     <script src="https://unpkg.com/accordion-js@3.3.4/dist/accordion.min.js"></script>
     <script type="module" src="/utils/script.js"></script>
+    <script src="/utils/responsive.js"></script>
 </body>
 </html>
