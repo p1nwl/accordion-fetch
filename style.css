@@ -1,15 +1,17 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     min-height: 100vh;
-    background-image: url(/utils/pexels-felix-mittermeier-956999.jpg);
+    background-image: url(assets/pexels-felix-mittermeier-956999.jpg);
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
     padding: 20px;
+    overflow: hidden;
 }
 
 a {
@@ -52,7 +54,7 @@ span {
     font-weight: bolder;
 }
 
-.line {
+.button-line {
     display: flex;
     width: 35px;
     height: 5px;
@@ -60,30 +62,30 @@ span {
     border-radius: 5px;
 }
 
-.line1 {
+.button-line1 {
     transform-origin: 0% 0%;
     transition: transform 0.3s ease-in-out;
 }
   
-.line2 {
+.button-line2 {
     transition: transform 0.2s ease-in-out;
 }
   
-.line3 {
+.button-line3 {
     transform-origin: 0% 100%;
     transition: transform 0.3s ease-in-out;
 }
 
-.mobile-nav-toggle .line1.active {
+.mobile-nav-toggle .button-line1.active {
     transform-origin: 0% 0%;
     transform: rotate(-320deg);
 }
 
-.mobile-nav-toggle .line2.active {
+.mobile-nav-toggle .button-line2.active {
     transform: scale(0, 0);
 }
 
-.mobile-nav-toggle .line3.active {
+.mobile-nav-toggle .button-line3.active {
     transform-origin: 0% 100%;
     transform: rotate(320deg);
 }

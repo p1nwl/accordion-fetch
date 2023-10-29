@@ -1,13 +1,11 @@
 export function accordion(url) {
     const accordionContainer = document.createElement('div');
     
-    const getData = (url) => 
-        new Promise((resolve, reject) => 
-            fetch(url)
-            .then(response => response.json())
-            .then(json => resolve(json))
-            .catch(error => reject(error))
-    )
+    const getData = async (url) => {
+        const res = await fetch(url)
+        const json = await res.json()
+        return json
+    }
     
     getData(url)
         .then(function (data) {   
